@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interactivo con el teclado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Mis películas favoritas</h1>
+
+        <p class="instruccion">
+            Presiona las teclas 1, 2, 3, 4 o 5
+        </p>
+
+        <h2 id="titulo">Elige una película</h2>
+
+        <img id="imagen" src="imagen1.jpg" alt="Imagen">
+
+        <p id="descripcion">
+            Presiona una tecla para cambiar la información.
+        </p>
+
+    </div>
+
+    <script>
+
+        document.addEventListener("keydown", function(event) {
+
+            var titulo = document.getElementById("titulo");
+            var imagen = document.getElementById("imagen");
+            var descripcion = document.getElementById("descripcion");
+
+            if (event.key == "1") {
+
+                titulo.innerHTML = "Película 1";
+                imagen.src = "imagen1.jpg";
+                descripcion.innerHTML = "Esta es mi primera película seleccionada.";
+
+            }
+
+            else if (event.key == "2") {
+
+                titulo.innerHTML = "Película 2";
+                imagen.src = "imagen2.jpg";
+                descripcion.innerHTML = "Esta es mi segunda película seleccionada.";
+
+            }
+
+            else if (event.key == "3") {
+
+                titulo.innerHTML = "Película 3";
+                imagen.src = "imagen3.jpg";
+                descripcion.innerHTML = "Esta es mi tercera película seleccionada.";
+
+            }
+
+            else if (event.key == "4") {
+
+                titulo.innerHTML = "Película 4";
+                imagen.src = "imagen4.jpg";
+                descripcion.innerHTML = "Esta es mi cuarta película seleccionada.";
+
+            }
+
+            else if (event.key == "5") {
+
+                titulo.innerHTML = "Película 5";
+                imagen.src = "imagen5.jpg";
+                descripcion.innerHTML = "Esta es mi quinta película seleccionada.";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
