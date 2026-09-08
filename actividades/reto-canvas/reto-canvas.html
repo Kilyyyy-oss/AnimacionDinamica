@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Reto Canvas DVD</title>
+
+    <style>
+        body {
+            text-align: center;
+            background-color: #222;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        canvas {
+            border: 2px solid white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Reto Canvas - DVD</h1>
+
+    <canvas id="micanvas" width="800" height="600"></canvas>
+
+    <script>
+        var canvas = document.getElementById("micanvas");
+        var context = canvas.getContext("2d");
+
+        var imagen = new Image();
+        imagen.src = "logo_dvd.png";
+
+        var ancho = 150;
+        var alto = 80;
+
+        var x = 100;
+        var y = 100;
+
+        var dx = 3;
+        var dy = 3;
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            context.drawImage(imagen, x, y, ancho, alto);
+
+            x += dx;
+            y += dy;
+
+            if (x + ancho >= canvas.width || x <= 0) {
+                dx = -dx;
+            }
+
+            if (y + alto >= canvas.height || y <= 0) {
+                dy = -dy;
+            }
+        }
+
+        imagen.onload = function() {
+            animate();
+        };
+    </script>
+
+</body>
+</html>
