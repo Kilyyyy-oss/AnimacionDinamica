@@ -1,0 +1,36 @@
+body {
+    background-color: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+#titulo {
+    color: #e8b04a;
+    font-size: 32px;
+}
+
+#imagen {
+    width: 350px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.3);
+}
+
+#descripcion {
+    font-size: 18px;
+    margin-top: 20px;
+}
